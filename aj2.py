@@ -1,6 +1,6 @@
 import os
 import datetime
-import colorama 
+import colorama as c
 from art import * # optional
 
 # initializing colorama
@@ -10,10 +10,10 @@ from art import * # optional
 now = datetime.datetime.today().strftime("%H:%M:%S %d-%m-%Y")
 
 
-#print(c.Fore.LIGHTCYAN_EX)
-#print(c.Back.WHITE)
-#tprint("AWESOME JOURNAL", font="random") # displaying wonderful title
-#print(c.Style.RESET_ALL)
+print(c.Fore.LIGHTCYAN_EX)
+print(c.Back.WHITE)
+tprint("AWESOME JOURNAL", font="random") # displaying wonderful title
+print(c.Style.RESET_ALL)
 
 
 # load the journal and print it
@@ -21,6 +21,7 @@ with open("journal.txt", "r") as file:
     the_whole_file = file.read()
 print(the_whole_file)
 
+current_pwd = os.getcwd() # defining path variable for later if statement
 
 # display current journal
 new_entry = input("ENTER DIARY ENTRY HERE >>> ")
